@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+    <link rel="stylesheet" href="css/monCSS.css">
+    <link rel="text/javascript" type="text/javascript" href="Class/Bonus.js">
+    <script type="text/javascript" src="Class/Catastrophe.js"></script>
+    <script type="text/javascript" src="Class/Sword.js"></script>
+    <script type="text/javascript" src="Class/Moteur.js"></script>
+    <script type="text/javascript" src="Class/Tools.js"></script>
+    <script type="text/javascript" src="Class/Bonus.js"></script>
+    <script type="text/javascript" src="Class/Personnage.js"></script>
+    <script> new Clock()</script>
+    <title>MineClicker</title>
+
+</head>
+
+<body background="img/fond.png">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Class/Bonus.js"></script>
+    <center>
+        <img src="img/banniere.png" id="banniere"></img>
+    </center>
+
+    <br/>
+    <div class="container">
+        <!-- Changer les types columns vers les types tiles-->
+        <div class="columns is-multiline is-mobile">
+            <div class="column is-two-quarter">
+                <!--<img src="img/perso/niveau1.png" id="perso" alt="Your appearence">
+                <img name="swordButton" id="WoodSword" type="image" src="img/armes/WoodSword.png" alt="Add 3 damages/sec" onclick="javascript:addASword();"
+                    style="cursor:pointer">-->
+                <span class="tile is-child notification is-vertical">
+                    <p style="display:inline" class="title is-4" id="compteur">0
+                        <img src="img/emeraude.png">
+                    </p>
+                    <p class="title is-4" id="nbTotalDegats">
+                        Argent depuis le debut: 0
+                        <img src="img/emeraude.png">
+                    </p>
+                </span>
+                <div class="zoomEffectContainerPerso">
+                    <div class="imageCard">
+                        <img src="img/perso/niveau1.png" id="perso" alt="Your appearence" title="Votre personnage">
+                    </div>
+                </div>
+                <div class="zoomEffectContainerPerso">
+                    <div class="imageCard">
+                        <img name="swordButton" id="WoodSword" type="image" src="img/armes/WoodSword.png" onclick="javascript:addASwordBonus();"
+                            style="cursor:pointer" title="Votre épée">
+                    </div>
+                </div>
+                <div class="zoomEffectContainerPerso">
+                    <div class="imageCard">
+                        <img style="cursor:pointer" src="img/mobs/zombie.png" name="Zombie" id="Zombie" alt="mob" onclick="javascript:incrementClick();"
+                            title="UN ZOMBIE!!">
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div class="title is-5" id="matosWood" style="display:none;">
+                    <b>Il vous faut 15 emeraudes</b>
+                </div>
+                <div class="title is-5" id="matosStone" style="display:none;">
+                    <b>Il vous faut 45 emeraudes</b>
+                </div>
+                <div class="title is-5" id="matosIron" style="display:none;">
+                    <b>Il vous faut 100 emeraudes</b>
+                </div>
+                <div class="title is-5" id="matosGold" style="display:none;">
+                    <b>Il vous faut 250 emeraudes</b>
+                </div>
+                <div class="title is-5" id="matosDiamond" style="display:none;">
+                    <b>Il vous faut 1000 emeraudes</b>
+                </div>
+                <div class="title is-5" id="showCatastrophe1" style="display:none;">
+                    <b>Une armée de villageois vous attaque, vous perdez tout votre argent!!!</b>
+                </div>
+                <div class="title is-5" id="showCatastrophe2" style="display:none;">
+                    <b>Vous avez trop bu hier soir et ne savez plus où sont toutes vos épées!!! Et en plus vous avez la gueule
+                        de bois. Pas malin.</b>
+                </div>
+                <div class="title is-5" id="persoNiv2" style="display:none;">
+                    <b>Vous passez niveau 2</b>
+                </div>
+                <div class="title is-5" id="persoNiv3" style="display:none;">
+                    <b>Vous passez niveau 3</b>
+                </div>
+                <div class="title is-5" id="persoNiv4" style="display:none;">
+                    <b>Vous passez niveau 4</b>
+                </div>
+                <div class="title is-5" id="persoNiv5" style="display:none;">
+                    <b>Vous passez niveau 5</b>
+                </div>
+                <div class="title is-5" id="persoNiv6" style="display:none;">
+                    <b>Vous passez niveau 6</b>
+                </div>
+                <div class="title is-5" id="persoNiv7" style="display:none;">
+                    <b>Vous passez niveau 7</b>
+                </div>
+                <div class="title is-5" id="persoNiv8" style="display:none;">
+                    <b>Vous passez niveau 8</b>
+                </div>
+            </div>
+            <div class="column is-two-quarter">
+                <div class="block">
+                    <div class="notification" id="WoodSwordDiv">
+                        <img src="img/bonus/WoodSwordBonusSmall.png"> Wood Swords
+                        <img src="img/bonus/WoodSwordBonusSmall.png">
+                    </div>
+                    <div id="WoodSwordBonuses">
+                        
+                    </div>
+                    <div id="ifDiamondSup10">
+                            <b>
+
+                            </b>
+                        </div>
+                </div>
+                <div class="notification is-danger">
+                    <img src="img/trophee.png"> Achievements
+                    <img src="img/trophee.png">
+                </div>
+
+
+
+                <div class="zoomEffectContainerAchievement">
+                    <div class="imageCard" id="Achievement1"></div>
+                </div>
+                <div class="zoomEffectContainerAchievement">
+                    <div class="imageCard" id="Achievement2"></div>
+                </div>
+                <div class="zoomEffectContainerAchievement">
+                    <div class="imageCard" id="Achievement3"></div>
+                </div>
+                <div class="zoomEffectContainerAchievement">
+                    <div class="imageCard" id="Achievement4"></div>
+                </div>
+                <div class="zoomEffectContainerAchievement">
+                    <div class="imageCard" id="Achievement5"></div>
+                </div>
+                <!-- <div class="zoomEffectContainerAchievement" ><div class="imageCard" id="Achievement6"></div></div>
+                <div class="zoomEffectContainerAchievement" ><div class="imageCard" id="Achievement7"></div></div>
+                <div class="zoomEffectContainerAchievement" ><div class="imageCard" id="Achievement8"></div></div>
+                <div class="zoomEffectContainerAchievement" ><div class="imageCard" id="Achievement9"></div></div>
+                <div class="zoomEffectContainerAchievement" ><div class="imageCard" id="Achievement10"></div></div>
+                <div class="zoomEffectContainerAchievement" ><div class="imageCard" id="Achievement11"></div></div>
+                <div class="zoomEffectContainerAchievement" ><div class="imageCard" id="Achievement12"></div></div> -->
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div class="title is-5" id="showAchievement1" style="display:none;"><b>Vous avez acheté votre première épée en pierre</b></div>
+                <div class="title is-5" id="showAchievement2" style="display:none;"><b>Vous avez acheté votre première épée en fer</b></div>
+                <div class="title is-5" id="showAchievement3" style="display:none;"><b>Vous avez acheté votre première épée en or</b></div>
+                <div class="title is-5" id="showAchievement4" style="display:none;"><b>Vous avez acheté votre première épée en diamant</b></div>
+                <div class="title is-5" id="showAchievement5" style="display:none;"><b>Vous avez tapé 5 fois sur un zombie!!Votre transformation commence!!</b></div>
+            </div>
+            <!--<div class="block">
+
+                    <div class="notification" id="StoneSwordDiv"><img src="img/bonus/StoneSwordBonusSmall.png">Stone Swords<img src="img/bonus/StoneSwordBonusSmall.png"></div>
+                    <div id="StoneSwordBonuses">
+                    </div>
+                </div>-->
+            <!--<div class="block">
+                    <div class="notification" id="IronSwordDiv"><img src="img/bonus/IronSwordBonusSmall.png">Iron Swords<img src="img/bonus/IronSwordBonusSmall.png"></div>
+                    <div id="IronSwordBonuses">
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="notification" id="GoldSwordDiv"><img src="img/bonus/GoldSwordBonusSmall.png">Gold Swords<img src="img/bonus/GoldSwordBonusSmall.png"></div>
+                    <div id="GoldSwordBonuses">
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="notification" id="DiamondSwordDiv"><img src="img/bonus/DiamondSwordBonusSmall.png">Diamond Swords<img src="img/bonus/DiamondSwordBonusSmall.png"></div>
+                    <div id="DiamondSwordBonuses">
+                    </div>
+                </div>-->
+        </div>
+    </div>
+
+</body>
+
+</html>
