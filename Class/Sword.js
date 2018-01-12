@@ -1,61 +1,31 @@
 class Sword {
-    constructor(id, src, nbDegat) {
-        this.id = id;
-        this.src = src;
-        this.nbDegat = nbDegat;
+    changeSword(typeSword) {
+        if (nbGold >= 5) {
+            id("GoldSword", "DiamondSword");
+            src("DiamondSword", "img/armes/DiamondSword.png");
+        } else if (nbIron >= 5) {
+            id("IronSword", "GoldSword");
+            src("GoldSword", "img/armes/GoldSword.png");
+        } else if (nbStone >= 5) {
+            id("StoneSword", "IronSword");
+            src("IronSword", "img/armes/IronSword.png");
+        } else if (nbWood >= 5) {
+            id("WoodSword", "StoneSword");
+            src("StoneSword", "img/armes/StoneSword.png");
+        } if (compteur > 15 & document.getElementById("WoodSword")) {
+            document.getElementById("WoodSword").src = "img/armes/WoodSword.png";
+        }
+
     }
-
-    changeSword() {
-        
-        if (tools.nbGold >= 5) {
-            sword.upgradeToDiamond();
-        } else if (tools.nbIron >= 5) {
-            sword.upgradeToGold();
-        } else if (tools.nbStone >= 5) {
-            sword.upgradeToIron();
-        } else if (tools.nbWood >= 5) {
-            sword.upgradeToStone();
-        } 
-
-    }
-
-    upgradeToDiamond() {
-        sword.id = "DiamondSword";
-        sword.src = "img/armes/DiamondSword.png";
-        sword.nbDegat = 0.1;
-        tools.changeSrcSword();
-    }
-
-    upgradeToGold() {
-        sword.id = "GoldSword";
-        sword.src = "img/armes/GoldSword.png";
-        sword.nbDegat = 0.05;
-        tools.changeSrcSword();
-    }
-
-    upgradeToIron() {
-        sword.id = "IronSword";
-        sword.src = "img/armes/IronSword.png";
-        sword.nbDegat = 0.02;
-        tools.changeSrcSword();
-    }
-
-    upgradeToStone() {
-        sword.id = "StoneSword";
-        sword.src = "img/armes/StoneSword.png";
-        sword.nbDegat = 0.01;
-        tools.changeSrcSword();
-    }
-
-
 
     ChangeSwordType(ancientSwordType, newSwordType, ancientSwordBonuses, newSwordBonuses, actualSword, numberPerSecond) {
         if (document.getElementById(ancientSwordType)) {
-            document.getElementById(ancientSwordType).innerHTML = '<img src="img/bonus/' + actualSword + 'SwordBonusSmall.png">' + actualSword + ' Swords <img src="img/bonus/' + actualSword + 'SwordBonusSmall.png">';
+            document.getElementById(ancientSwordType).innerHTML = '<img src="img/bonus/' + actualSword + 'SwordBonusSmall.png">' + actualSword + ' Swords (' + numberPerSecond + ' par seconde) <img src="img/bonus/' + actualSword + 'SwordBonusSmall.png">';
             document.getElementById(ancientSwordType).id = newSwordType;
             document.getElementById(ancientSwordBonuses).innerHTML = "";
             document.getElementById(ancientSwordBonuses).id = newSwordBonuses;
         }
+
     }
 }
 

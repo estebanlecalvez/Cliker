@@ -10,13 +10,6 @@ var achievementNumber = 1;
 var compteurArrondi = 0;
 var compteurTotalArrondi = 0;
 
-function giveMeEmerald(nb){
-    compteur+=nb;
-    compteurArrondi+=nb;
-    afficheCompteur();
-    afficheTotal();
-}
-
 function text(id, text) {
     return document.getElementById(id).innerHTML = text;
 }

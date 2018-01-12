@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
     <link rel="stylesheet" href="css/monCSS.css">
+    <link rel="text/javascript" type="text/javascript" href="Class/Bonus.js">
     <script type="text/javascript" src="Class/Catastrophe.js"></script>
-    <script type="text/javascript" src="Class/Bonus.js"></script>
     <script type="text/javascript" src="Class/Sword.js"></script>
-    <script type="text/javascript" src="Class/Personnage.js"></script>
-    <script type="text/javascript" src="Class/Tools.js"></script>      
     <script type="text/javascript" src="Class/Moteur.js"></script>
- 
-  
+    <script type="text/javascript" src="Class/Tools.js"></script>
+    <script type="text/javascript" src="Class/Bonus.js"></script>
+    <script type="text/javascript" src="Class/Personnage.js"></script>
     <script> new Clock()</script>
     <title>MineClicker</title>
 
@@ -53,13 +52,13 @@
                 </div>
                 <div class="zoomEffectContainerPerso">
                     <div class="imageCard">
-                        <img name="swordButton" id="WoodSword" type="image" src="img/armes/WoodSword.png" onclick="tools.addASwordBonus();"
+                        <img name="swordButton" id="WoodSword" type="image" src="img/armes/WoodSword.png" onclick="javascript:addASwordBonus();"
                             style="cursor:pointer" title="Votre épée">
                     </div>
                 </div>
                 <div class="zoomEffectContainerPerso">
                     <div class="imageCard">
-                        <img style="cursor:pointer" src="img/mobs/zombie.png" name="Zombie" id="Zombie" alt="mob" onclick="tools.incrementClick();"
+                        <img style="cursor:pointer" src="img/mobs/zombie.png" name="Zombie" id="Zombie" alt="mob" onclick="javascript:incrementClick();"
                             title="UN ZOMBIE!!">
                     </div>
                 </div>
@@ -73,46 +72,47 @@
                 <br/>
                 <br/>
                 <br/>
-                <div class="title is-4" id="matosWood" style="display:none;">
+                <div class="title is-5" id="matosWood" style="display:none;">
                     <b>Il vous faut 15 emeraudes</b>
                 </div>
-                <div class="title is-4" id="matosStone" style="display:none;">
+                <div class="title is-5" id="matosStone" style="display:none;">
                     <b>Il vous faut 45 emeraudes</b>
                 </div>
-                <div class="title is-4" id="matosIron" style="display:none;">
+                <div class="title is-5" id="matosIron" style="display:none;">
                     <b>Il vous faut 100 emeraudes</b>
                 </div>
-                <div class="title is-4" id="matosGold" style="display:none;">
+                <div class="title is-5" id="matosGold" style="display:none;">
                     <b>Il vous faut 250 emeraudes</b>
                 </div>
-                <div class="title is-4" id="matosDiamond" style="display:none;">
+                <div class="title is-5" id="matosDiamond" style="display:none;">
                     <b>Il vous faut 1000 emeraudes</b>
                 </div>
-                <div class="title is-4" id="showCatastrophe1" style="display:none;">
+                <div class="title is-5" id="showCatastrophe1" style="display:none;">
                     <b>Une armée de villageois vous attaque, vous perdez tout votre argent!!!</b>
                 </div>
-                <div class="title is-4" id="showCatastrophe2" style="display:none;">
-                    <b>Vous avez trop bu hier soir et avez dépensé 15000 emeraudes!</b>
+                <div class="title is-5" id="showCatastrophe2" style="display:none;">
+                    <b>Vous avez trop bu hier soir et ne savez plus où sont toutes vos épées!!! Et en plus vous avez la gueule
+                        de bois. Pas malin.</b>
                 </div>
-                <div class="title is-4" id="persoNiv2" style="display:none;">
+                <div class="title is-5" id="persoNiv2" style="display:none;">
                     <b>Vous passez niveau 2</b>
                 </div>
-                <div class="title is-4" id="persoNiv3" style="display:none;">
+                <div class="title is-5" id="persoNiv3" style="display:none;">
                     <b>Vous passez niveau 3</b>
                 </div>
-                <div class="title is-4" id="persoNiv4" style="display:none;">
+                <div class="title is-5" id="persoNiv4" style="display:none;">
                     <b>Vous passez niveau 4</b>
                 </div>
-                <div class="title is-4" id="persoNiv5" style="display:none;">
+                <div class="title is-5" id="persoNiv5" style="display:none;">
                     <b>Vous passez niveau 5</b>
                 </div>
-                <div class="title is-4" id="persoNiv6" style="display:none;">
+                <div class="title is-5" id="persoNiv6" style="display:none;">
                     <b>Vous passez niveau 6</b>
                 </div>
-                <div class="title is-4" id="persoNiv7" style="display:none;">
+                <div class="title is-5" id="persoNiv7" style="display:none;">
                     <b>Vous passez niveau 7</b>
                 </div>
-                <div class="title is-4" id="persoNiv8" style="display:none;">
+                <div class="title is-5" id="persoNiv8" style="display:none;">
                     <b>Vous passez niveau 8</b>
                 </div>
             </div>
@@ -164,11 +164,11 @@
                 <br/>
                 <br/>
                 <br/>
-                <div class="title is-4" id="showAchievement1" style="display:none;"><b>Vous avez acheté votre première épée en pierre</b></div>
-                <div class="title is-4" id="showAchievement2" style="display:none;"><b>Vous avez acheté votre première épée en fer</b></div>
-                <div class="title is-4" id="showAchievement3" style="display:none;"><b>Vous avez acheté votre première épée en or</b></div>
-                <div class="title is-4" id="showAchievement4" style="display:none;"><b>Vous avez acheté votre première épée en diamant</b></div>
-                <div class="title is-4" id="showAchievement5" style="display:none;"><b>Vous avez tapé 5 fois sur un zombie!!Votre transformation commence!!</b></div>
+                <div class="title is-5" id="showAchievement1" style="display:none;"><b>Vous avez acheté votre première épée en pierre</b></div>
+                <div class="title is-5" id="showAchievement2" style="display:none;"><b>Vous avez acheté votre première épée en fer</b></div>
+                <div class="title is-5" id="showAchievement3" style="display:none;"><b>Vous avez acheté votre première épée en or</b></div>
+                <div class="title is-5" id="showAchievement4" style="display:none;"><b>Vous avez acheté votre première épée en diamant</b></div>
+                <div class="title is-5" id="showAchievement5" style="display:none;"><b>Vous avez tapé 5 fois sur un zombie!!Votre transformation commence!!</b></div>
             </div>
             <!--<div class="block">
 

@@ -1,30 +1,24 @@
 class Catastrophe {
-
-    constructor(chance){
+    chance = Math.ceil(Math.random() * 100000);
+    constructor(type,chance){
+        this.type = type;
         this.chance = chance;
     }
-
-    catastrophe(chance) {
-        catastrophe.chance=Math.ceil(Math.random()*100000);
-        if (chance < 10) {
-            tools.displayText("showCatastrophe1", "red", 4000);
-            tools.compteur = 0;
+    get chance(){
+        return this.chance;
+    }
+    catastrophe() {
+        var catastrophe = new Catastrophe(1, 10);
+        if (catastrophe < catastrophe.chance()) {
+            displayText("showCatastrophe1", "red", 4000);
+            compteur = 0;
         }
 
-        if (chance > 99990) {
-            tools.displayText("showCatastrophe2", "red", 4000);
-            tools.compteur -=15000;
-            tools.afficheCompteur();
-            if (tools.compteur < 0) {
-                setTimeout(function(){
-                    alert("Tu as perdu tout tes diamants et même bien plus, c'est le GAME OVER.");
-                    window.location.reload();
-                }, 1000);
-            }
-           
+        if (catastrophe > 99990) {
+            displayText("showCatastrophe2", "red", 4000);
+
         }
     }
-
 
 }
 

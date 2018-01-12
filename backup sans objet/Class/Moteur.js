@@ -1,5 +1,3 @@
-'use strict';
-
 class Clock {
     construtor() {
         init();
@@ -21,7 +19,6 @@ class Clock {
     engine() {
         if (nbWood != 0) {
             //math.ceil pose problemme
-           
             compteur = compteur + (nbWood * 0.03);
             nbTotalDegats = nbTotalDegats + (nbWood * 0.03);
             compteurArrondi = Math.ceil(compteur);
