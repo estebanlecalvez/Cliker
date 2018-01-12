@@ -8,14 +8,13 @@ il prend des grades, verts pour basique, bleu pour rare, violet pour épique, or
 (aucun impact sur le jeu))
 
 # Fonction d'épées : FAIT 5/5
-
-Changer d'épée quand on a suffisement d'emeraudes. 
+	Changer d'épée quand on a suffisement d'emeraudes. 
 	-15 emeraudes pour débloquer l'épée de bois OK
 	-5 épées de bois pour débloquer l'épée de pierre et supprimer l'épée de bois OK
 	-5 épées de pierre débloquer l'épée de fer et supprimer l'épée de pierre OK
 	-250 emeraudes pour l'épée d'or et supprimer l'épée de fer OK
 	-1000 emeraudes pour l'épée de diamant et supprimer l'épée d'or OK
-(on part du principe que quand on peut créer une épée de niveau superieur on ne créera pas une épée de plus bas niveau)
+	(on part du principe que quand on peut créer une épée de niveau superieur on ne créera pas une épée de plus bas niveau)
 
 # Ajouter une épée FAIT 5/5
 	-15 emeraudes pour acheter une épée de bois, 1 emeraude par seconde par épée OK
@@ -24,9 +23,7 @@ Changer d'épée quand on a suffisement d'emeraudes.
 	-1500 emeraudes pour acheter une épée d'or (quand elle est débloquée), 20 emeraudes par seconde par épée OK
 	-5000 emeraudes pour acheter une épée de diamant (quand elle est débloquée), 50 emeraudes par seconde par épée OK
 
-# Fonctions de trophées:
-
-Ajouter un trophée: 2/5
+# Fonctions de trophées:Ajouter un trophée: 2/5
 	Trophée quand on tape 200 zombies 
 	Trophée quand on débloque les épées (un par épée) OK
 	Trophée quand on se fait plus de 100 000 emeraudes au total OK
@@ -40,6 +37,6 @@ Ajouter un trophée: 2/5
 	Catastrophe un zombie vous tue (perte de 1 niveau de personnage)
 
 # Fonction cheat 
-qui donne des emeraudes (à utiliser en console avec tools.giveMeEmeralds(nb d'emeraudes voulu); )
-Elle n'est pas très utile.
+	qui donne des emeraudes (à utiliser en console avec tools.giveMeEmeralds(nb d'emeraudes voulu); )
+	Elle n'est pas très utile.
 	
