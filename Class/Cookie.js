@@ -3,6 +3,7 @@
 class Cookie {
     constructor(game) {
         this.cookie = 0;
+        
     }
 
     count(number) {

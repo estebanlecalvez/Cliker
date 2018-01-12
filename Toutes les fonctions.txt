@@ -1,7 +1,7 @@
-Fonction de personnage:FAIT MAIS A REVOIR
+Fonction de personnage:FAIT
 
-changer de personnage quand on tape suffisement de zombies (8 niveaux de perso) 
-(le personnage commence humain et se transforme peut à peut en robot, quand il a fini sa transformation en robot,
+changer de personnage quand on tape suffisement de zombies/ quand on a suffisamment d'argent
+(le personnage commence humain et se transforme peu à peu en robot, quand il a fini sa transformation en robot,
 il prend des grades, verts pour basique, bleu pour rare, violet pour épique, orange pour légendaire.
 (aucun impact sur le jeu))
 
@@ -10,9 +10,9 @@ Fonction d'épées : FAIT 5/5
 Changer d'épée quand on a suffisement d'emeraudes. 
 	-15 emeraudes pour débloquer l'épée de bois OK
 	-5 épées de bois pour débloquer l'épée de pierre et supprimer l'épée de bois OK
-	-10 épées de pierre débloquer l'épée de fer et supprimer l'épée de pierre OK
-	-1500 emeraudes pour l'épée d'or et supprimer l'épée de fer OK
-	-5000 emeraudes pour l'épée de diamant et supprimer l'épée d'or OK
+	-5 épées de pierre débloquer l'épée de fer et supprimer l'épée de pierre OK
+	-250 emeraudes pour l'épée d'or et supprimer l'épée de fer OK
+	-1000 emeraudes pour l'épée de diamant et supprimer l'épée d'or OK
 (on part du principe que quand on peut créer une épée de niveau superieur on ne créera pas une épée de plus bas niveau)
 
 Ajouter une épée FAIT 5/5
@@ -24,23 +24,19 @@ Ajouter une épée FAIT 5/5
 
 Fonctions de trophées:
 
-Ajouter un trophée: 2/5/7
+Ajouter un trophée: 2/5
 	Trophée quand on tape 200 zombies 
-	Trophée quand on évolue au niveau 2 du personnage 
 	Trophée quand on débloque les épées (un par épée) OK
 	Trophée quand on se fait plus de 100 000 emeraudes au total OK
-	Trophée quand on se fait plus de 10 000 000 emeraudes au total
-	Trophée quand on possède 50 000 emeraudes 
-	Trophée quand on possède 600 000 emeraudes
 	(Optionnel) Trophée quand on clique 5 fois en moins d'une seconde
 	(Optionnel) Trophée quand on clique 50 fois en moins d'une seconde(utilisation d'un clickBot donc)
 
-Fonctions de catastrophe arrivant aléatoirement à une intervalle plus ou moins régulière: 1/6
+Fonctions de catastrophe arrivant aléatoirement à une intervalle plus ou moins régulière: 2/6
 	Catastrophe emeraudes actuels à 0 OK
-	Catastrophe Perte de toutes les épées (diamant, or, fer, pierre, bois)
-	Catastrophe Perte de 50 emeraudes (souvent et activé uniquement quand on en à plus de 50) 
-	Catastrophe Perte de 1000 emeraudes (moins souvent et activé uniquement quand on en à plus de 1000)
-	Catastrophe Perte de 100 000 emeraudes (encore moins souvent mais activé dès le début ce qui fait que la partie 
-		se fini si on est à moins de 100 000 à se moment)
+	Catastrophe Perte de toutes les épées (diamant, or, fer, pierre, bois) 
+	Catastrophe Perte de 150000 emeraudes OK
 	Catastrophe un zombie vous tue (perte de 1 niveau de personnage)
+
+Fonction cheat qui donne des emeraudes (à utiliser en console avec tools.giveMeEmeralds(nb d'emeraudes voulu); )
+Elle n'est pas très utile.
 	
