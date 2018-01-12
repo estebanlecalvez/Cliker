@@ -2,10 +2,10 @@
 
 # Fonction de personnage:FAIT
 
-changer de personnage quand on tape suffisement de zombies/ quand on a suffisamment d'argent
-(le personnage commence humain et se transforme peu à peu en robot, quand il a fini sa transformation en robot,
-il prend des grades, verts pour basique, bleu pour rare, violet pour épique, orange pour légendaire.
-(aucun impact sur le jeu))
+	changer de personnage quand on tape suffisement de zombies/ quand on a suffisamment d'argent
+	(le personnage commence humain et se transforme peu à peu en robot, quand il a fini sa transformation en robot,
+	il prend des grades, verts pour basique, bleu pour rare, violet pour épique, orange pour légendaire.
+	(aucun impact sur le jeu))
 
 # Fonction d'épées : FAIT 5/5
 	Changer d'épée quand on a suffisement d'emeraudes. 
