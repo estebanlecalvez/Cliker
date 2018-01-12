@@ -9,39 +9,41 @@ var nbClicsOnZombie = 0;
 var achievementNumber = 1;
 var compteurArrondi = 0;
 var compteurTotalArrondi = 0;
+class Tools {
+    text(id, text) {
+        return document.getElementById(id).innerHTML = text;
+    }
 
-function text(id, text) {
-    return document.getElementById(id).innerHTML = text;
-}
+    html(id, text) {
+        return document.getElementById(id).innerText = text;
+    }
 
-function html(id, text) {
-    return document.getElementById(id).innerText = text;
-}
+    src(id, src) {
+        return document.getElementById(id).src = src;
+    }
 
-function src(id, src) {
-    return document.getElementById(id).src = src;
-}
+    id(idBefore, idNew) {
+        return document.getElementById(idBefore).id = idNew;
+    }
 
-function id(idBefore, idNew) {
-    return document.getElementById(idBefore).id = idNew;
-}
+    appendChild(id, child) {
+        document.getElementById(id).appendChild(child);
+    }
 
-function appendChild(id, child) {
-    document.getElementById(id).appendChild(child);
-}
-
-function displayText(idText, colorText, time) {
-    document.getElementById(idText).style.display = "block";
-    document.getElementById(idText).style.color = colorText;
-    setTimeout(function () {
-        document.getElementById(idText).style.display = "none";
-    }, time);
-}
+    displayText(idText, colorText, time) {
+        document.getElementById(idText).style.display = "block";
+        document.getElementById(idText).style.color = colorText;
+        setTimeout(function () {
+            document.getElementById(idText).style.display = "none";
+        }, time);
+    }
 
 
-function afficheCompteur(materielActuel) {
-    document.getElementById("compteur").innerHTML = compteur + '<img src="img/emeraude.png">';
-}
-function afficheTotal() {
-    document.getElementById("nbTotalDegats").innerHTML = 'Argent depuis le debut:' + nbTotalDegats + '<img src="img/emeraude.png">';
+    afficheCompteur(materielActuel) {
+        document.getElementById("compteur").innerHTML = compteur + '<img src="img/emeraude.png">';
+    }
+    afficheTotal() {
+        document.getElementById("nbTotalDegats").innerHTML = 'Argent depuis le debut:' + nbTotalDegats + '<img src="img/emeraude.png">';
+    }
+
 }
